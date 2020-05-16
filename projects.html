@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javier Melendrez</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        /* Float Shadow */
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+        body {
+            background: linear-gradient(-45deg, #21e77a, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        /* .jumbotron {
+            background: rgba(0, 0, 0, 0.0);
+        
+        } */
+        .nav-pills>li>a {
+            color: black!important;
+        }
+        .nav-pills>li>a.active {
+            background-color:  white!important;
+            color: black!important;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+          </ul>
+    </header>
+    <main class="animate__animated animate__fadeInUp">
+
+        <div class="container" style="background: rgba(0, 0, 0, 0.0);;height: 800px;text-align: center;margin-top: 2em;">
+
+            <div class="row">
+                <div class="col hvr-float-shadow">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="bee.png" alt="Card image cap" width="200px" height="200px">
+                        <div class="card-body">
+                          <h5 class="card-title">Trucking Company Website</h5>
+                          <p class="card-text">Used Bootstrap to design and build a website for a trucking company.</p>
+                          <br>
+                          <br>
+                          <br>
+                          <a href="http://www.beetruckinginc.com" class="btn btn-primary">Go to Website</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col hvr-float-shadow">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="reddit.PNG" alt="Card image cap" width="200px" height="200px">
+                        <div class="card-body">
+                          <h5 class="card-title">Reddit Microservices</h5>
+                          <p class="card-text">Used Python and Flask to create back-end web services to a web application similar to Reddit.</p>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                          <a href="https://github.com/antonio-lopez/cspc-449-project-1.git" class="btn btn-primary">Go to Repo</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col hvr-float-shadow">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="rtp.PNG" alt="Card image cap" width="200px" height="200px">
+                        <div class="card-body">
+                          <h5 class="card-title">Video Streaming with RTSP and RTP</h5>
+                          <p class="card-text">Implement a streaming video server and client that communicate using the Real-Time
+                            Streaming Protocol (RTSP) and send data using the Real-time Transfer Protocol (RTP).</p>
+                          <a href="https://github.com/javimelendrez/471LastProject.git" class="btn btn-primary">Go to Repo</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+</body>
+</html>
